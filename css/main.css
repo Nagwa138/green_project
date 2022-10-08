@@ -3,6 +3,16 @@
     padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
+    
+    transition: all 1s !important;
+}
+
+#toggle {
+    display: none;
+}
+
+#toggle:checked + div {
+    display: block;
 }
 
 section {
@@ -11,14 +21,16 @@ section {
 
 section .contact {
     height: 6vh;
-    background-color: rgba(21, 143, 72, 0.105);
+    background-color: rgba(21, 143, 72, 0.023);
 }
 
-
-section .contact  .container {
-    width: 85%;
+.container {
+    width: 81%;
     margin: auto;
     height: 100%;
+}
+
+section .contact  .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -71,9 +83,6 @@ section .nav {
 }
 
 section .nav .container {
-    width: 85%;
-    margin: auto;
-    height: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -92,9 +101,21 @@ section .nav .logo {
 
 section .nav .container .menu {
     width: 60%;
+    transition: all 1s;
     height: inherit;
+    position: static;
 }
 
+section .nav .container i {
+    font-size: 20px;
+    font-weight: bold;
+    display: none;
+}
+
+
+section .nav .container i:hover {
+    color: #60b97a;
+}
 
 section .nav .container .menu ul{
     list-style: none;
@@ -109,6 +130,7 @@ section .nav .container .menu ul{
 
 section .nav .container .menu ul li:first-child{
     color: #60b97a;
+
 }
 
 section .nav .container .menu ul li:last-child{
@@ -117,6 +139,13 @@ section .nav .container .menu ul li:last-child{
     border-radius: 4px;
     color: #60b97a;
     font-weight:bold;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+section .nav .container .menu ul li:last-child:hover {
+    background-color: #60b97a;
+    color: white;
 }
 
 section .nav .container .menu ul li i {
@@ -148,10 +177,7 @@ section .content .text {
 }
 
 
-section .content .text .container {
-    width: 85%;
-    margin: auto;
-    height: 100%;   
+section .content .text .container {  
     display: flex;
     align-items: center;
 }
@@ -168,6 +194,13 @@ section .content .text .container .text-container {
     color: white;
 }
 
+
+section .content .text .container .text-container p {
+    padding: 10px 0;
+    
+    word-break: break-all;
+}
+
 section .content .text .container .text-container  h1
 {
     font-size: 35px;
@@ -180,4 +213,106 @@ section .content .text .container .text-container button {
     background-color: #60b97a;
     color: white;
     border-radius: 5px;
+}
+
+section .white-content {
+    min-height: 45vh;
+    background-color: rgba(21, 143, 72, 0.023);
+}
+
+section .white-content .container {
+    display: flex;
+    justify-content: space-around;
+    gap: 35px;
+
+}
+
+
+section .white-content .box{
+    height: inherit;
+    flex-grow: 1;
+    display: flex;
+    padding-top:3.5%;
+    gap: 20px;
+    flex-direction: column;
+    /* justify-content: space-between; */
+}
+
+section .white-content .box i{
+    font-size: 35px;
+    color: #60b97a;
+}
+
+
+section .white-content .box p {
+    word-break: break-all;
+}
+
+
+@media screen and (max-width:1016px) {
+    
+section .nav .container .menu {
+    width: 75%;
+}
+
+
+section .contact .container .info div span {
+    display: none;
+}
+
+section .contact .container .info {
+
+    width:15%;
+
+
+}
+
+
+section .contact .container .icons {
+    width: 25%;
+}
+}
+
+
+@media screen and (max-width:814px) {
+    section .nav .container .menu {
+        display: none;
+        width: 0;
+        position: absolute;
+        z-index: 5;
+        right: 52%;
+        top: 19vh;
+        bottom: 0;
+
+        
+    transition: all 1s;
+    }
+
+    section .nav .container .menu ul{
+        flex-direction: column;
+        height: 81vh;
+        padding: 8vh 0;
+        width: 50vw;
+        background-color: white;
+    }
+    
+    section .nav .container i {
+        display: block;
+    }
+
+    section .white-content .container {
+        flex-wrap: wrap;
+    }
+
+    
+    section .white-content .box{
+        width: 100%;
+    
+    }
+
+    
+section .white-content .container{
+    padding: 5vh 0;
+}
+
 }
