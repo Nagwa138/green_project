@@ -157,6 +157,7 @@ section .content {
     background-image: url('../images/pexels-quintin-gellar-313782.jpg');
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
     position: relative;
     z-index: 0;
 }
@@ -247,6 +248,34 @@ section .white-content .box i{
 section .white-content .box p {
     word-break: break-all;
 }
+
+section .img-container {
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+section .img-container #parent{
+    height: 50%;
+    width: 50%;
+    overflow: hidden;
+}
+section .img-container #parent div{ 
+    height: 400px;
+    width: auto;
+    /* background-color: black; */
+    background-image: url('../images/pexels-david-mceachan-71241.jpg');
+    background-size: cover;
+    background-position: center;
+    /* background-attachment: fixed; */
+}
+section .img-container #parent div:hover {
+    transform: scale(50);
+}
+
 
 
 @media screen and (max-width:1016px) {
